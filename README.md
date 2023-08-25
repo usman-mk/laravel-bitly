@@ -7,6 +7,78 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Common setup
+
+Clone the repo and install the dependencies.
+
+```bash
+git clone https://github.com/usman-mk/laravel-bitly.git
+cd laravel-bitly
+```
+
+Install composer.
+
+```bash
+composer install
+```
+
+Copy file .env-example to .env
+
+for Mac/Linux
+```bash
+cp .env-example to .env
+```
+for Window
+```bash
+copy .env-example to .env
+```
+
+Generate key.
+
+```bash
+php artisan key:generate
+```
+
+Set ENV Variable for connect to Database.
+
+```bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel_bitly
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+Run migration.
+
+```bash
+php artisan migrate
+```
+
+Run seed for User default.
+
+```bash
+php artisan db:seed --class=AdminUserSeeder
+```
+
+Example User.
+
+```bash
+email=admin@mail.com
+password=admin123
+```
+
+Run Laravel App.
+
+```bash
+php artisan serve
+```
+
+## Remark
+
+Change password for first time login.
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
